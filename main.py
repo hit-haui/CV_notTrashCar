@@ -4,7 +4,7 @@ from param import *
 import time
 
 
-video_test = '/Users/lamhoangtung/cds_data/output.mp4'
+video_test = '/home/linus/CV_notTrashCar/output.mp4'
 
 
 def frame_process(raw_img):
@@ -46,7 +46,7 @@ def main():
         _, frame = cap.read()
         if frame is not None:
             cv2.imshow('processed_frame', frame_process(frame))
-        # cv2.waitKey(0)
+        cv2.waitKey(0)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cap.release()
